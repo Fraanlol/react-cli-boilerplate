@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CLI to bootstrap a React + TypeScript + Vite + Tailwind project",
   "bin": {
-    "create-my-app": "index.js"
+    "create-my-app": "./index.js"
   },
   "type": "module",
   "files": [
