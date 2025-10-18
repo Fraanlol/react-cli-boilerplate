@@ -1,9 +1,9 @@
 {
-  "name": "create-my-app",
+  "name": "create-modern-react-app",
   "version": "1.0.0",
   "description": "CLI to bootstrap a React + TypeScript + Vite + Tailwind project",
   "bin": {
-    "create-my-app": "./index.js"
+    "create-modern-react-app": "./index.js"
   },
   "type": "module",
   "files": [
@@ -16,8 +16,7 @@
     "degit": "2.8.4",
     "fs-extra": "11.3.2",
     "inquirer": "9.3.8",
-    "ora": "8.2.0",
-    "prompts": "2.4.2"
+    "ora": "8.2.0"
   },
   "license": "MIT",
   "engines": {
