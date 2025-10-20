@@ -17,7 +17,7 @@ const packageJson = fs.readJsonSync(path.join(__dirname, "package.json"));
 
 const program = new Command();
 
-const AVAILABLE_TEMPLATES = ["base", "redux"];
+const AVAILABLE_TEMPLATES = ["base", "zustand"];
 
 function validateTemplate(template) {
   if (!template || typeof template !== "string") {
