@@ -195,7 +195,7 @@ async function createProject(projectName, options) {
 }
 
 program
-  .name("create-modern-react-app")
+  .name("react-quick-boil")
   .description(
     "Create a modern React application with TypeScript, Vite, and TailwindCSS"
   )
