@@ -1,6 +1,6 @@
 {
   "name": "react-quick-boil",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "CLI to bootstrap a React + TypeScript + Vite + Tailwind project",
   "bin": {
     "react-quick-boil": "./index.js"
