@@ -151,6 +151,7 @@ async function createProject(projectName, options) {
       console.log(chalk.white(`  cd ${projectName}`));
       console.log(chalk.white("  npm install"));
       console.log(chalk.white("  npm run dev\n"));
+      process.exit(1);
     } catch (err) {
       spinner.fail("Failed to download template.");
 
