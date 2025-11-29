@@ -17,23 +17,23 @@ const packageJson = fs.readJsonSync(path.join(__dirname, "package.json"));
 
 const program = new Command();
 
-const AVAILABLE_TEMPLATES = ["base", "zustand"];
+const AVAILABLE_TEMPLATES = ["react-base", "react-zustand", "next-base"];
 
 function validateTemplate(template) {
   if (!template || typeof template !== "string") {
-    return "base";
+    return "react-base";
   }
 
   const name = template.trim().toLowerCase();
 
   // Basic validation for template name
   if (!/^[a-z0-9-]+$/.test(name)) {
-    return "base";
+    return "react-base";
   }
 
   // Check if template is in the available list
   if (!AVAILABLE_TEMPLATES.includes(name)) {
-    return "base";
+    return "react-base";
   }
 
   return name;
@@ -73,7 +73,7 @@ async function createProject(projectName, options) {
         name: "template",
         message: "Select a template:",
         choices: AVAILABLE_TEMPLATES,
-        default: "base",
+        default: "react-base",
         when: () => !template || !AVAILABLE_TEMPLATES.includes(template),
       },
     ]);
@@ -87,7 +87,7 @@ async function createProject(projectName, options) {
     if (finalTemplate !== template) {
       console.log(
         chalk.yellow(
-          `\n⚠️  Template '${template}' is not valid. Falling back to 'base'. Available templates: ${AVAILABLE_TEMPLATES.join(
+          `\n⚠️  Template '${template}' is not valid. Falling back to 'react-base'. Available templates: ${AVAILABLE_TEMPLATES.join(
             ", "
           )}\n`
         )
@@ -131,7 +131,7 @@ async function createProject(projectName, options) {
     const spinner = ora("Downloading template...").start();
 
     try {
-      const emitter = degit(`fraanlol/template-react-${template}`, {
+      const emitter = degit(`fraanlol/template-${template}`, {
         cache: false,
         force: true,
         verbose: false,
